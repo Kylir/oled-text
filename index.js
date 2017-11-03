@@ -6,7 +6,7 @@ const {send, json} = require('micro'),
     Oled = require('oled-i2c-bus'),
     i2c = require('i2c-bus'),
     font = require('oled-font-5x7'),
-    c = require('../config/constants')
+    c = require('./conf/config.js')
 
 let i2cBus = i2c.openSync(1)
 
