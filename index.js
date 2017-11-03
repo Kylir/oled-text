@@ -5,6 +5,7 @@
 const {send, json} = require('micro'),
     Oled = require('oled-i2c-bus'),
     i2c = require('i2c-bus'),
+    font = require('oled-font-5x7'),
     c = require('../config/constants')
 
 let i2cBus = i2c.openSync(1)
@@ -30,7 +31,6 @@ module.exports = async (req, res) => {
         status = 400
         data.msg = 'Bad Request. No text property specified in the query.'
     } else {
-        //(re)set the cursor and display the text
         oled.setCursor(1, 1);
         oled.writeString(font, 1, text, 1, true);
         data.msg = 'Ok. Text sent to the screen.'

@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/Kylir/oled-text#readme",
   "dependencies": {
-    "micro": "^9.0.0"
+    "micro": "^9.0.0",
+    "i2c-bus": "^1.2.2",
+    "oled-font-5x7": "^1.0.0",
+    "oled-i2c-bus": "^1.0.10"
   }
 }
