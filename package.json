@@ -1,0 +1,27 @@
+{
+  "name": "oled-text",
+  "version": "0.0.1",
+  "description": "Micro service to display text on an I2C oled screen connected to a raspberry-pi.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "micro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kylir/oled-text.git"
+  },
+  "keywords": [
+    "oled",
+    "raspberry-pi"
+  ],
+  "author": "Jason Forest",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kylir/oled-text/issues"
+  },
+  "homepage": "https://github.com/Kylir/oled-text#readme",
+  "dependencies": {
+    "micro": "^9.0.0"
+  }
+}
