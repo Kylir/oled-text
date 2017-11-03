@@ -17,8 +17,8 @@ let opts = {
 }
 
 let oled = new Oled(i2cBus, opts)
-oled.clearDisplay()
 oled.turnOnDisplay()
+oled.clearDisplay()
 
 module.exports = async (req, res) => {
     const body = await json(req)
@@ -31,11 +31,11 @@ module.exports = async (req, res) => {
         status = 400
         data.msg = 'Bad Request. No text property specified in the query.'
     } else {
-        oled.setCursor(1, 1);
-        oled.writeString(font, 1, text, 1, true);
+        oled.clearDisplay()
+        oled.setCursor(1, 1)
+        oled.writeString(font, 1, text, 1, true)
         data.msg = 'Ok. Text sent to the screen.'
     }
 
     send(res, status, data)
-
 }
