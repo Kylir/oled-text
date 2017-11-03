@@ -31,8 +31,8 @@ module.exports = async (req, res) => {
         status = 400
         data.msg = 'Bad Request. No text property specified in the query.'
     } else {
-        oled.clearDisplay()
         oled.setCursor(1, 1)
+        oled.clearDisplay()
         oled.writeString(font, 1, text, 1, true)
         data.msg = 'Ok. Text sent to the screen.'
     }
